@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+@font-face {
+    font-family: maxine;
+    src: url(../../../assets/fonts/maxine.ttf);
+}
+
+a {
+    color: unset !important;
+    text-decoration: none;
+}
+
+main {
+    width: calc(100vw - 17px);
+    height: 100vh;
+}
+
+.tabs {
+    /* background-color: red; */
+    border-right: 1px solid grey;
+}
+
+.userInformation {
+    margin: 0 3rem 0 auto;
+    height: max-content;
+    width: 70%;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.heading-sm {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.page-name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height */
+    text-align: center;
+    color: #000000;
+}
+
+.page-name span.active {
+    color: #971bf8;
+}
+
+.maxine-title {
+    font-family: maxine;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 69px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(264.14deg, #EF19F3 2.71%, #971BF8 54.65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+input,
+select {
+    background: #F8F8F8 !important;
+    border: 1px solid #BBBBBB !important;
+    border-radius: 9px !important;
+}
+
+.buttons {
+    width: 270px;
+    height: 58px;
+    background: #FD08B6 !important;
+    border-radius: 16px !important;
+    font-weight: 700 !important;
+    font-size: 21px !important;
+    line-height: 30px !important;
+    /* identical to box height */
+    text-align: center !important;
+    color: #FFFFFF !important;
+}
+
+.footer {
+    height: 45px;
+    margin-top: 10rem;
+    border-top: 1px solid #d9d9d9;
+}
+
+.footer p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.martop {
+    margin-top: 100vh;
+    background-color: red;
+}
+
+.cartItem-container {
+    margin-left: 42.75px !important;
+    /* border-right: 1px solid; */
+}
+
+table {
+    margin-top: 76px;
+    font-size: 13px !important;
+    background: #F8F8F8;
+    border-radius: 33px;
+    padding: 10px;
+    height: max-content;
+}
+
+th {
+    border: none !important;
+}
+
+td {
+    border-top: none !important;
+}
+
+td div.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: left;
+    color: #000000;
+}
+
+.previewImage {
+    width: 105px;
+    height: 97px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/images/neons/e33ba54f339302b1a6b8ac3c68ef86f0.jpg);
+}
+
+.previewImageBtn {
+    cursor: pointer;
+}
+
+.botprodheck {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    color: #000000;
+}
+
+td.amount {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.botprodheckp {
+    text-align: right !important;
+}
+
+.horizontal-line {
+    border-top: 1px solid grey;
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+    main {
+        width: 100vw;
+    }
+    main div:first-child {
+        flex-wrap: wrap;
+    }
+    .maxine-title {
+        font-family: maxine;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 69px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(264.14deg, #EF19F3 2.71%, #971BF8 54.65%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .cartItem-container {
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0 !important;
+        padding: 2px 10px;
+    }
+    .userInformation {
+        padding: 5px 5px 0 25px;
+        height: max-content;
+        width: 100%;
+    }
+    .footer p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 0px;
+        display: flex;
+        margin: 0 10px;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+    }
+    .botprodheckp {
+        text-align: center !important;
+    }
+    .botprodheck {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: center !important;
+        line-height: 19px;
+        color: #000000;
+    }
+}
