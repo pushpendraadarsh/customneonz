@@ -69,6 +69,15 @@ function numberWithCommas(x) {
     return x;
 }
 
+
+function checkCheckbox(id) {
+    if ($('input#' + id).prop('checked')) {
+        return "yes";
+    } else {
+        return "no";
+    }
+}
+
 function tabs(id) {
     $("#" + id + "_btn").click(function() {
         $(".tabs").removeClass("active");
@@ -89,58 +98,18 @@ function text_enter_preview() {
     }
 }
 
-function alter(text, position) {
-    var cont = $(".notice-alt");
-    cont.show();
-    cont.css({
-        "top": position.top + "px",
-        "left": position.left + "px"
-    });
-    cont.html(text);
-    setTimeout(() => {
-        cont.hide();
-    }, 5000);
-}
+function textByContSize(a) {
+    let text = $(a).val().replace(" ", '').length;
 
-
-function checkCheckbox(id) {
-    if ($('input#' + id).prop('checked')) {
-        return "yes";
+    let container = $(".mover");
+    let i = 20;
+    let value = i - parseFloat(text / 4);
+    if (value > 0) {
+        container.css("font-size", value + "px");
     } else {
-        return "no";
+        container.css("font-size", 20 + "px");
     }
 }
-document.getElementById("add_cart").addEventListener("click", function() {
-    $(this).attr("disabled", true);
-    $("#preloader").fadeIn();
-    html2canvas(document.getElementById("typed_text"), {
-        backgroundColor: null
-    }).then(function(canvas) {
-        var imgData = canvas.toDataURL('image/png');
-        $("#img").attr("src", imgData);
-
-        let cart_data = {
-            "image": imgData,
-            "name": $("textarea").val().replace(" ", '_'),
-            "font": $(".font.active").css("font-family"),
-            "color": $(".color.active").attr("name"),
-            "size": {
-                "name": $(".cont.size.active")[0].children[0].children[0].innerText,
-                "amount": $("#OverallAmount").html().replace("$", '').replace(",", ''),
-                "width": $(".cont.size.active")[0].children[1].children[0]
-                    .innerText,
-                "height": $(".cont.size.active")[0].children[1].children[1]
-                    .innerText,
-            },
-            "power_adapter": $("#power_adapter").val(),
-            "backboard_shape": $("#backboard_shape").val(),
-            "bumper_sale": checkCheckbox("bumper_sale"),
-            "hanging": checkCheckbox("hanging"),
-            "wall_mounting": checkCheckbox("wall_mounting"),
-        };
-        add_cart(cart_data);
-    });
-});
 
 function all_size_price_amount(txt, enter) {
     txt = parseInt(txt);
@@ -151,76 +120,66 @@ function all_size_price_amount(txt, enter) {
         dataType: "json",
         success: function(result) {
             console.log((parseFloat(result[5].lengths) * parseFloat(txt)));
-			if (txt <= 15) {
-            $(".small-price").html("$" + parseInt(parseInt(result[0].price[0][txt - 1]) + parseInt((newlineamount * enter))));
-            $(".small-length").html((parseFloat(result[0].lengths) * parseFloat(txt)).toFixed(2));
-            $(".small-height").html(result[0].height);
+            if (txt <= 15) {
+                $(".small-price").html("$" + parseInt(parseInt(result[0].price[0][txt - 1]) + parseInt((newlineamount * enter))));
+                $(".small-length").html((parseFloat(result[0].lengths) * parseFloat(txt)).toFixed(2));
+                $(".small-height").html(result[0].height);
 
-            $(".medium-price").html("$" + parseInt(parseInt(result[1].price[0][txt - 1]) + parseInt((newlineamount * enter))));
-            $(".medium-length").html((parseFloat(result[1].lengths) * parseFloat(txt)).toFixed(2));
-            $(".medium-height").html(result[1].height);
+                $(".medium-price").html("$" + parseInt(parseInt(result[1].price[0][txt - 1]) + parseInt((newlineamount * enter))));
+                $(".medium-length").html((parseFloat(result[1].lengths) * parseFloat(txt)).toFixed(2));
+                $(".medium-height").html(result[1].height);
 
-            $(".large-price").html("$" + parseInt(parseInt(result[2].price[0][txt - 1]) + parseInt((newlineamount * enter))));
-            $(".large-length").html((parseFloat(result[2].lengths) * parseFloat(txt)).toFixed(2));
-            $(".large-height").html(result[2].height);
+                $(".large-price").html("$" + parseInt(parseInt(result[2].price[0][txt - 1]) + parseInt((newlineamount * enter))));
+                $(".large-length").html((parseFloat(result[2].lengths) * parseFloat(txt)).toFixed(2));
+                $(".large-height").html(result[2].height);
 
-            $(".x-large-price").html("$" + parseInt(parseInt(result[3].price[0][txt - 1]) + parseInt((newlineamount * enter))));
-            $(".x-large-length").html((parseFloat(result[3].lengths) * parseFloat(txt)).toFixed(2));
-            $(".x-large-height").html(result[3].height);
+                $(".x-large-price").html("$" + parseInt(parseInt(result[3].price[0][txt - 1]) + parseInt((newlineamount * enter))));
+                $(".x-large-length").html((parseFloat(result[3].lengths) * parseFloat(txt)).toFixed(2));
+                $(".x-large-height").html(result[3].height);
 
-            $(".xx-large-price").html("$" + parseInt(parseInt(result[4].price[0][txt - 1]) + parseInt((newlineamount * enter))));
-            $(".xx-large-length").html((parseFloat(result[4].lengths) * parseFloat(txt)).toFixed(2));
-            $(".xx-large-height").html(result[4].height);
+                $(".xx-large-price").html("$" + parseInt(parseInt(result[4].price[0][txt - 1]) + parseInt((newlineamount * enter))));
+                $(".xx-large-length").html((parseFloat(result[4].lengths) * parseFloat(txt)).toFixed(2));
+                $(".xx-large-height").html(result[4].height);
 
-            $(".collosal-price").html("$" + parseInt(parseInt(result[5].price[0][txt - 1]) + parseInt((newlineamount * enter))));
-            $(".collosal-length").html((parseFloat(result[5].lengths) * parseFloat(txt)).toFixed(2));
-            $(".collosal-height").html(result[5].height);
-          }else {
-		    $(".small-price").html("$" + parseInt(parseInt(result[0].price[0][14]) + parseInt((newlineamount * enter)) + result[0].addon *                                                                    (txt - 15)));
-            $(".small-length").html((parseFloat(result[0].lengths) * parseFloat(txt)).toFixed(2));
-            $(".small-height").html(result[0].height);
+                $(".collosal-price").html("$" + parseInt(parseInt(result[5].price[0][txt - 1]) + parseInt((newlineamount * enter))));
+                $(".collosal-length").html((parseFloat(result[5].lengths) * parseFloat(txt)).toFixed(2));
+                $(".collosal-height").html(result[5].height);
+            } else {
+                $(".small-price").html("$" + parseInt(parseInt(result[0].price[0][14]) + parseInt((newlineamount * enter)) + result[0].addon * (txt - 15)));
+                $(".small-length").html((parseFloat(result[0].lengths) * parseFloat(txt)).toFixed(2));
+                $(".small-height").html(result[0].height);
 
-            $(".medium-price").html("$" + parseInt(parseInt(result[1].price[0][14]) + parseInt((newlineamount * enter)) + result[1].addon *                                                                 (txt - 15)));
-            $(".medium-length").html((parseFloat(result[1].lengths) * parseFloat(txt)).toFixed(2));
-            $(".medium-height").html(result[1].height);
+                $(".medium-price").html("$" + parseInt(parseInt(result[1].price[0][14]) + parseInt((newlineamount * enter)) + result[1].addon * (txt - 15)));
+                $(".medium-length").html((parseFloat(result[1].lengths) * parseFloat(txt)).toFixed(2));
+                $(".medium-height").html(result[1].height);
 
-            $(".large-price").html("$" + parseInt(parseInt(result[2].price[0][14]) + parseInt((newlineamount * enter)) + result[2].addon *                                                                 (txt - 15)));
-            $(".large-length").html((parseFloat(result[2].lengths) * parseFloat(txt)).toFixed(2));
-            $(".large-height").html(result[2].height);
+                $(".large-price").html("$" + parseInt(parseInt(result[2].price[0][14]) + parseInt((newlineamount * enter)) + result[2].addon * (txt - 15)));
+                $(".large-length").html((parseFloat(result[2].lengths) * parseFloat(txt)).toFixed(2));
+                $(".large-height").html(result[2].height);
 
-            $(".x-large-price").html("$" + parseInt(parseInt(result[3].price[0][14]) + parseInt((newlineamount * enter)) + result[3].addon *                                                                 (txt - 15)));
-            $(".x-large-length").html((parseFloat(result[3].lengths) * parseFloat(txt)).toFixed(2));
-            $(".x-large-height").html(result[3].height);
+                $(".x-large-price").html("$" + parseInt(parseInt(result[3].price[0][14]) + parseInt((newlineamount * enter)) + result[3].addon * (txt - 15)));
+                $(".x-large-length").html((parseFloat(result[3].lengths) * parseFloat(txt)).toFixed(2));
+                $(".x-large-height").html(result[3].height);
 
-            $(".xx-large-price").html("$" + parseInt(parseInt(result[4].price[0][14]) + parseInt((newlineamount * enter)) + result[4].addon *                                                                 (txt - 15)));
-            $(".xx-large-length").html((parseFloat(result[4].lengths) * parseFloat(txt)).toFixed(2));
-            $(".xx-large-height").html(result[4].height);
+                $(".xx-large-price").html("$" + parseInt(parseInt(result[4].price[0][14]) + parseInt((newlineamount * enter)) + result[4].addon * (txt - 15)));
+                $(".xx-large-length").html((parseFloat(result[4].lengths) * parseFloat(txt)).toFixed(2));
+                $(".xx-large-height").html(result[4].height);
 
-            $(".collosal-price").html("$" + parseInt(parseInt(result[5].price[0][14]) + parseInt((newlineamount * enter)) + result[5].addon *                                                                 (txt - 15)));
-            $(".collosal-length").html((parseFloat(result[5].lengths) * parseFloat(txt)).toFixed(2));
-            $(".collosal-height").html(result[5].height);
-		  }
-		}
+                $(".collosal-price").html("$" + parseInt(parseInt(result[5].price[0][14]) + parseInt((newlineamount * enter)) + result[5].addon * (txt - 15)));
+                $(".collosal-length").html((parseFloat(result[5].lengths) * parseFloat(txt)).toFixed(2));
+                $(".collosal-height").html(result[5].height);
+            }
+        }
     });
 }
 
 function size_handler(width, height) {
-    if ($(".vertical .text").html() == "" && $(".horizontal .text").html() == "") {
+    if (height === 0 || width === 0) {
         $(".vertical").css("display", "none");
         $(".horizontal").css("display", "none");
+        $(".vertical .text").html("");
+        $(".horizontal .text").html("");
     } else {
-        setTimeout(() => {
-            $(".vertical").css("display", "flex");
-            $(".horizontal").css("display", "flex");
-        }, 2000);
-    }
-    if (width == "0" || width == 0) {
-        $(".vertical").css("display", "none");
-        $(".horizontal").css("display", "none");
-    } else if($("#type_text").val() == '') {
-	    $(".vertical").css("display", "none");
-        $(".horizontal").css("display", "none");
-	}else{
         let element = $("#typed_text");
         let position = element.position();
         $(".vertical").css({
@@ -228,10 +187,10 @@ function size_handler(width, height) {
             "left": (position.left + element.width() + 20) + "px",
             "height": element.height() + "px"
         });
-		let www = element.width();
-		if (www < 25) {
-			www = 54;
-		}
+        let www = element.width();
+        if (www < 25) {
+            www = 54;
+        }
         $(".horizontal").css({
             "top": (position.top + element.height() + 30) + "px",
             "left": (position.left) + "px",
@@ -239,7 +198,10 @@ function size_handler(width, height) {
         });
         $(".vertical .text").html(height);
         $(".horizontal .text").html(width);
-        // $(".size")
+        setTimeout(() => {
+            $(".vertical").css("display", "flex");
+            $(".horizontal").css("display", "flex");
+        }, 2000);
     }
 }
 
@@ -248,9 +210,9 @@ function priceDeclare() {
     let text = $("textarea").val().replace(" ", '');
     let size_code = $(".cont.size.active").attr("size-code");
     let text_length = text.length;
-    if (text_length == 0 || text_length == '') {
+    if (text_length == 0 || text == '') {
         console.log("Please Enter Text");
-        size_handler(0);
+        size_handler(0, 0);
     } else {
         let count_new_line = (text.split("\n").length - 1);
         let new_line_price = 35;
@@ -387,10 +349,6 @@ function closePreviewBox() {
     setTimeout(() => {
         $("#testimonial_preview_container").css("display", "none");
     }, 190);
-}
-
-function fontLineSizePreview(size) {
-    $(".range-slider .output").html(size);
 }
 
 function fontSize(a) {
@@ -668,6 +626,59 @@ function bestseller_open(tag_code) {
 
 }
 
+function subscribeNow(you, e) {
+    e.preventDefault();
+    let data = new FormData(you);
+    if (data.get("email") == "") {
+        $("#subscribeUs .loading").hide();
+        $("#subscribeUs i").show();
+        $("#output_subscribe").html("Please Enter Email Id");
+        $("#output_subscribe").css("color", "red");
+    } else {
+        $.ajax({
+            type: "POST",
+            url: "../../api/subscribeNow.php",
+            data: data,
+            dataType: "json",
+            contentType: false,
+            cache: false,
+            processData: false,
+            beforeSend: function() {
+                $("#subscribeUs .loading").show();
+                $("#subscribeUs i").hide();
+            },
+            success: function(result) {
+                let promocode = "CNZ10";
+                if (result == 100) {
+                    $("#subscribeUs .loading").hide();
+                    $("#subscribeUs i").show();
+                    $("#output_subscribe").html("Please Enter Email Id.");
+                    $("#output_subscribe").css("color", "red");
+                    $(you).trigger("reset");
+                } else if (result == 200) {
+                    $("#subscribeUs .loading").hide();
+                    $("#subscribeUs i").show();
+                    $("#output_subscribe").html("Hurray! Here's yours discount code - <b>" + promocode + "</b>");
+                    $("#output_subscribe").css("color", "green");
+                    $(you).trigger("reset");
+                } else if (result == 300) {
+                    $("#subscribeUs .loading").hide();
+                    $("#subscribeUs i").show();
+                    $("#output_subscribe").html("Your Email is already registered please try another Email Id.");
+                    $("#output_subscribe").css("color", "red");
+                    $(you).trigger("reset");
+                } else {
+                    $("#subscribeUs .loading").hide();
+                    $("#subscribeUs i").show();
+                    $("#output_subscribe").html("Please try again.");
+                    $("#output_subscribe").css("color", "red");
+                    $(you).trigger("reset");
+                }
+            }
+        });
+    }
+}
+
 function bestseller_search_box(data) {
     $.ajax({
         type: "POST",
@@ -727,4 +738,26 @@ function bestseller_search_box(data) {
             }
         }
     });
+}
+
+//Repel Effect
+function createRipple(event) {
+    const button = event.currentTarget;
+
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    circle.classList.add("ripple");
+
+    const ripple = button.getElementsByClassName("ripple")[0];
+
+    if (ripple) {
+        ripple.remove();
+    }
+
+    button.appendChild(circle);
 }

@@ -9,8 +9,9 @@
     font-family: maxine;
     src: url(../fonts/maxine.ttf);
 }
-.sms{
-	position: fixed;
+
+.sms {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -20,8 +21,17 @@
     align-items: center;
     background-color: #4e4b4b96;
 }
-.sms #sms{
-	width: max-content;
+
+.mra-10 {
+    margin-right: 10rem;
+}
+
+.mta-10 {
+    margin-top: 10rem;
+}
+
+.sms #sms {
+    width: max-content;
     height: max-content;
     padding: 6rem;
     background-color: pink;
@@ -29,9 +39,21 @@
     font-size: 30rem;
     border-radius: 15rem;
 }
+
 html {
     font-size: 0.08vw;
     scroll-behavior: smooth;
+}
+
+.loader-sm {
+    display: none;
+    width: 30px;
+    height: auto;
+}
+
+#output_subscribe {
+    font-size: 15rem;
+    margin-top: 10rem;
 }
 
 
@@ -40,9 +62,12 @@ html {
         font-size: 2.2px;
     }
 } */
-.mta-5, .mya-5 {
-    margin-top: 35rem!important;
+
+.mta-5,
+.mya-5 {
+    margin-top: 35rem !important;
 }
+
 a {
     color: unset !important;
     text-decoration: none !important;
@@ -72,7 +97,7 @@ a {
 
 main {
     /*width: calc(100% - 15px);*/
-	width: 100%;
+    width: 100%;
     height: max-content;
 }
 
@@ -211,7 +236,7 @@ header div {
 }
 
 .search-container {
-     opacity: 0;
+    opacity: 0;
     visibility: hidden;
     position: absolute;
     top: 76rem;
@@ -366,7 +391,7 @@ section.page1 .buttons .btn {
 }
 
 .offer span {
-  position: absolute;
+    position: absolute;
     top: 92rem;
     width: 190rem;
     height: 30rem;
@@ -411,7 +436,7 @@ section.page2 div {
 }
 
 section.partners {
-     width: 100%;
+    width: 100%;
     height: 20vh;
     margin-top: -18rem !important;
     margin-left: 12rem;
@@ -688,26 +713,39 @@ section.page9 .item-container .text-container {
 }
 
 .subscribe-form {
-    background-color: white;
     width: 85%;
-    height: 49.74rem;
-    border-radius: 21rem;
-    font-size: 20rem;
+    height: max-content;
     margin: auto;
     margin-top: 35rem;
 }
 
-.subscribe-form input {
-    outline: none;
-    width: 80%;
-    height: 100%;
-    border: none;
-    background: transparent;
-    padding: 0 0 0 15rem;
+.subscribe-form form {
+    /* display: flex; */
 }
 
-.subscribe-form form {
-    display: inline-flex;
+.subscribe-form input {
+    outline: none;
+    width: 100%;
+    height: 10%;
+    border: none;
+    border-radius: 21rem;
+    font-size: 15rem;
+    padding: 8rem;
+    background-color: white;
+}
+
+.subscribe-form button {
+    width: 100%;
+    font-size: 20rem;
+    border-radius: 11.3rem;
+    margin-top: 20rem;
+    background-color: #fd08b6;
+    color: #ffffff;
+    border: 1px solid #fd08b6;
+}
+
+.subscribe-form button:hover {
+    background-color: #2e2c2d54;
 }
 
 .footer-p {
@@ -716,14 +754,6 @@ section.page9 .item-container .text-container {
     line-height: 0rem;
     align-items: center;
     color: #000000;
-}
-
-.subscribe-form button {
-    width: 20%;
-    height: 100%;
-    border: none;
-    background: transparent;
-    font-size: 25rem;
 }
 
 section.page10 .subscribe-container {}
@@ -739,4 +769,22 @@ section.page11 .footer-content ul li {
 .logo-image {
     width: 285rem;
     height: auto;
+}
+
+
+/*Repel Effect*/
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 700ms linear;
+    background-color: rgba(77, 72, 72, 0.932);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }

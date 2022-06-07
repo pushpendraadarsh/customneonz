@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="assets/css/responsiveDesign.v2.css?v=<?php echo $rand; ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -39,46 +38,42 @@
             <div class="d-sm-flex w-100 align-items-center">
                 <div class="name d-flex justify-content-start flex-column w-100">
                     <div><span class="maxine-title">Custom NeonZ</span></div>
-                    <div class="sub-title text-center w-100" style="font-size: 34px; font-weight: 700;">Design your
-                        slang!
+                    <div class="sub-title text-center w-100" style="font-size: 34px; font-weight: 700;">Design your slang!
                     </div>
                 </div>
             </div>
             <div class="d-sm-flex w-100 h-100 justify-content-start align-items-start mt-3 cont-Pre-Edit">
-			<div class="editing imagePreview position-relative">
-                <div class="editing mover ">
-                    <div class="size-handler vertical">
-                        <div class="first"></div>
-                        <div class="text"></div>
-                        <div class="last"></div>
+                <div class="editing imagePreview position-relative">
+                    <div class="editing mover ">
+                        <div class="size-handler vertical">
+                            <div class="first"></div>
+                            <div class="text"></div>
+                            <div class="last"></div>
+                        </div>
+                        <p class="text-preview" id="typed_text"></p>
+                        <div class="size-handler horizontal">
+                            <div class="first"></div>
+                            <div class="text"></div>
+                            <div class="last"></div>
+                        </div>
+                        <div class="background-slider-container">
+                            <img class="bgs active" src="assets/images/background/background1.jpg">
+                            <img class="bgs" src="assets/images/background/background2.jpg">
+                            <img class="bgs" src="assets/images/background/background3.jpg">
+                            <img class="bgs" src="assets/images/background/background4.jpg">
+                            <img class="bgs" src="assets/images/background/background5.jpg">
+                            <img class="bgs" src="assets/images/background/background6.jpg">
+                            <img class="bgs" src="assets/images/background/background7.jpg">
+                            <img class="bgs" src="assets/images/background/background8.jpg">
+                        </div>
                     </div>
-                    <p class="text-preview" id="typed_text"></p>
-                    <div class="size-handler horizontal">
-                        <div class="first"></div>
-                        <div class="text"></div>
-                        <div class="last"></div>
-                    </div>
-					<div class="background-slider-container">
-					    <img class="bgs active" src="assets/images/background/background1.jpg">
-						<img class="bgs" src="assets/images/background/background2.jpg">
-						<img class="bgs" src="assets/images/background/background3.jpg">
-						<img class="bgs" src="assets/images/background/background4.jpg">
-						<img class="bgs" src="assets/images/background/background5.jpg">
-						<img class="bgs" src="assets/images/background/background6.jpg">
-						<img class="bgs" src="assets/images/background/background7.jpg">
-						<img class="bgs" src="assets/images/background/background8.jpg">
-					</div>
                 </div>
-			</div>
                 <div class="editing editor-container">
                     <div class="content-editor w-100 h-100">
                         <div class="w-100 header row">
-                            <div class="d-flex justify-content-center align-items-center active items col-md-4 tabs"
-                                id="text_btn">Text</div>
-                            <div class="d-flex justify-content-center align-items-center items col-md-4 tabs"
-                                id="font_btn">Font</div>
-                            <div class="d-flex justify-content-center align-items-center items col-md-4 tabs"
-                                id="color_btn">Color</div>
+                            <div class="d-flex justify-content-center align-items-center active items col-md-4 tabs" id="text_btn">Text</div>
+                            <div class="d-flex justify-content-center align-items-center items col-md-4 tabs" id="font_btn">Font</div>
+                            <div class="d-flex justify-content-center align-items-center items col-md-4 tabs" id="color_btn">Color</div>
                         </div>
                         <div class="p-2 w-100 all-content">
                             <div class="text-container tablet">
@@ -87,8 +82,7 @@
                             </div>
                             <div class="font-container tablet d-none">
                                 <h5 class="mla-7">Select your Font</h5>
-                                <div
-                                    class="d-flex justify-content-start align-items-start flex-wrap text-center sizes w-100">
+                                <div class="d-flex justify-content-start align-items-start flex-wrap text-center sizes w-100">
                                     <div style="font-family: alexa;" size="80px" lineh="94%" class="font cont active">
                                         <img src="assets/images/fonts/alexa.svg" alt="">
                                     </div>
@@ -210,42 +204,30 @@
                             </div>
                             <div class="color-container tablet d-none">
                                 <h5 class="mla-7">Select your Color</h5>
-                                <div
-                                    class="d-flex justify-content-start align-items-start flex-wrap text-center sizes w-100">
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 253 207) 0px 0px 20px, rgb(255 253 207) 0px 0px 30px, rgb(255 253 207) 0px 0px 40px, rgb(255 253 207) 0px 0px 55px, rgb(255 253 207) 0px 0px 75px"
-                                        color="white" style="color: rgba(199, 193, 193, 0.925);" name="white"
-                                        class="material-icons color cont active">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 249 124) 0px 0px 20px, rgb(255 249 124) 0px 0px 30px, rgb(255 249 124) 0px 0px 40px, rgb(255 249 124) 0px 0px 55px, rgb(255 249 124) 0px 0px 75px"
-                                        color="rgb(255, 255, 255)" style="color: rgb(255, 249, 124);"
-                                        name="Lemon Yellow" class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 141 2) 0px 0px 20px, rgb(255 141 2) 0px 0px 30px, rgb(255 141 2) 0px 0px 40px, rgb(255 141 2) 0px 0px 55px, rgb(255 141 2) 0px 0px 75px"
-                                        name="Orange" style="color: orange;" color="rgb(255, 255, 255)"
+                                <div class="d-flex justify-content-start align-items-start flex-wrap text-center sizes w-100">
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 253 207) 0px 0px 20px, rgb(255 253 207) 0px 0px 30px, rgb(255 253 207) 0px 0px 40px, rgb(255 253 207) 0px 0px 55px, rgb(255 253 207) 0px 0px 75px" color="white" style="color: rgba(199, 193, 193, 0.925);"
+                                        name="white" class="material-icons color cont active">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 249 124) 0px 0px 20px, rgb(255 249 124) 0px 0px 30px, rgb(255 249 124) 0px 0px 40px, rgb(255 249 124) 0px 0px 55px, rgb(255 249 124) 0px 0px 75px" color="rgb(255, 255, 255)"
+                                        style="color: rgb(255, 249, 124);" name="Lemon Yellow" class="material-icons color cont">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 141 2) 0px 0px 20px, rgb(255 141 2) 0px 0px 30px, rgb(255 141 2) 0px 0px 40px, rgb(255 141 2) 0px 0px 55px, rgb(255 141 2) 0px 0px 75px" name="Orange" style="color: orange;"
+                                        color="rgb(255, 255, 255)" class="material-icons color cont">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 42 77) 0px 0px 20px, rgb(255 42 77) 0px 0px 30px, rgb(255 42 77) 0px 0px 40px, rgb(255 42 77) 0px 0px 55px, rgb(255 42 77) 0px 0px 75px" name="red" style="color: red;" color="rgb(255, 255, 255)"
                                         class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 42 77) 0px 0px 20px, rgb(255 42 77) 0px 0px 30px, rgb(255 42 77) 0px 0px 40px, rgb(255 42 77) 0px 0px 55px, rgb(255 42 77) 0px 0px 75px"
-                                        name="red" style="color: red;" color="rgb(255, 255, 255)"
-                                        class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 144 255) 0px 0px 20px, rgb(255 144 255) 0px 0px 30px, rgb(255 144 255) 0px 0px 40px, rgb(255 144 255) 0px 0px 55px, rgb(255 144 255) 0px 0px 75px"
-                                        name="Pink" style="color: pink;" color="rgb(255, 255, 255)"
-                                        class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 92 232) 0px 0px 20px, rgb(255 92 232) 0px 0px 30px, rgb(255 92 232) 0px 0px 40px, rgb(255 92 232) 0px 0px 55px, rgb(255 92 232) 0px 0px 75px"
-                                        name="Deep Pink" style="color: deeppink;" color="rgb(255, 255, 255)"
-                                        class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(2 116 252) 0px 0px 20px, rgb(2 116 252) 0px 0px 30px, rgb(2 116 252) 0px 0px 40px, rgb(2 116 252) 0px 0px 55px, rgb(2 116 252) 0px 0px 75px"
-                                        name="Deep Blue" style="color: blue;" color="rgb(255, 255, 255)"
-                                        class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(99 170 255) 0px 0px 20px, rgb(99 170 255) 0px 0px 30px, rgb(99 170 255) 0px 0px 40px, rgb(99 170 255) 0px 0px 55px, rgb(99 170 255) 0px 0px 75px"
-                                        name="Electric Blue" style="color: blue;" color="rgb(255, 255, 255)"
-                                        class="material-icons color cont">highlight</i>
-                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(11 215 72) 0px 0px 20px, rgb(11 215 72) 0px 0px 30px, rgb(11 215 72) 0px 0px 40px, rgb(11 215 72) 0px 0px 55px, rgb(11 215 72) 0px 0px 75px"
-                                        name="Green" style="color: green;" color="rgb(255, 255, 255)"
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 144 255) 0px 0px 20px, rgb(255 144 255) 0px 0px 30px, rgb(255 144 255) 0px 0px 40px, rgb(255 144 255) 0px 0px 55px, rgb(255 144 255) 0px 0px 75px" name="Pink" style="color: pink;"
+                                        color="rgb(255, 255, 255)" class="material-icons color cont">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(255 92 232) 0px 0px 20px, rgb(255 92 232) 0px 0px 30px, rgb(255 92 232) 0px 0px 40px, rgb(255 92 232) 0px 0px 55px, rgb(255 92 232) 0px 0px 75px" name="Deep Pink" style="color: deeppink;"
+                                        color="rgb(255, 255, 255)" class="material-icons color cont">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(2 116 252) 0px 0px 20px, rgb(2 116 252) 0px 0px 30px, rgb(2 116 252) 0px 0px 40px, rgb(2 116 252) 0px 0px 55px, rgb(2 116 252) 0px 0px 75px" name="Deep Blue" style="color: blue;"
+                                        color="rgb(255, 255, 255)" class="material-icons color cont">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(99 170 255) 0px 0px 20px, rgb(99 170 255) 0px 0px 30px, rgb(99 170 255) 0px 0px 40px, rgb(99 170 255) 0px 0px 55px, rgb(99 170 255) 0px 0px 75px" name="Electric Blue" style="color: blue;"
+                                        color="rgb(255, 255, 255)" class="material-icons color cont">highlight</i>
+                                    <i neon="rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px, rgb(11 215 72) 0px 0px 20px, rgb(11 215 72) 0px 0px 30px, rgb(11 215 72) 0px 0px 40px, rgb(11 215 72) 0px 0px 55px, rgb(11 215 72) 0px 0px 75px" name="Green" style="color: green;" color="rgb(255, 255, 255)"
                                         class="material-icons color cont">highlight</i>
                                 </div>
                             </div>
                             <h5 class="mla-7">Select your options</h5>
-                            <div
-                                class="coo d-flex justify-content-start align-items-start flex-wrap text-center sizes w-100">
-                                <div class="cont active size d-flex justify-content-around align-items-center flex-row"
-                                    size-code="cnz1">
+                            <div class="coo d-flex justify-content-start align-items-start flex-wrap text-center sizes w-100">
+                                <div class="cont active size d-flex justify-content-around align-items-center flex-row" size-code="cnz1">
                                     <div class="p-1 text-lg">
                                         <div>Small</div>
                                         <div class="small-price">$99</div>
@@ -255,8 +237,7 @@
                                         <div class="m-1">Height: <span class="small-height"></span>"</div>
                                     </div>
                                 </div>
-                                <div class="cont size d-flex justify-content-around align-items-center flex-row"
-                                    size-code="cnz2">
+                                <div class="cont size d-flex justify-content-around align-items-center flex-row" size-code="cnz2">
                                     <div class="p-1 text-lg">
                                         <div>Medium</div>
                                         <div class="medium-price">$125</div>
@@ -266,8 +247,7 @@
                                         <div class="m-1">Height: <span class="medium-height"></span>"</div>
                                     </div>
                                 </div>
-                                <div class="cont size d-flex justify-content-around align-items-center flex-row"
-                                    size-code="cnz3">
+                                <div class="cont size d-flex justify-content-around align-items-center flex-row" size-code="cnz3">
                                     <div class="p-1 text-lg">
                                         <div>Large</div>
                                         <div class="large-price">$150</div>
@@ -277,8 +257,7 @@
                                         <div class="m-1">Height: <span class="large-height"></span>"</div>
                                     </div>
                                 </div>
-                                <div class="cont size d-flex justify-content-around align-items-center flex-row"
-                                    size-code="cnz4">
+                                <div class="cont size d-flex justify-content-around align-items-center flex-row" size-code="cnz4">
                                     <div class="p-1 text-lg">
                                         <div>X Large</div>
                                         <div class="x-large-price">$165</div>
@@ -288,8 +267,7 @@
                                         <div class="m-1">Height: <span class="x-large-height"></span>"</div>
                                     </div>
                                 </div>
-                                <div class="cont size d-flex justify-content-around align-items-center flex-row"
-                                    size-code="cnz5">
+                                <div class="cont size d-flex justify-content-around align-items-center flex-row" size-code="cnz5">
                                     <div class="p-1 text-lg">
                                         <div>XX Large</div>
                                         <div class="xx-large-price">$190</div>
@@ -299,8 +277,7 @@
                                         <div class="m-1">Height: <span class="xx-large-height"></span>"</div>
                                     </div>
                                 </div>
-                                <div class="cont size d-flex justify-content-around align-items-center flex-row"
-                                    size-code="cnz6">
+                                <div class="cont size d-flex justify-content-around align-items-center flex-row" size-code="cnz6">
                                     <div class="p-1 text-lg">
                                         <div>Collosal</div>
                                         <div class="collosal-price">$230</div>
@@ -315,48 +292,51 @@
                                 <h5 class="col-md-6">Power adapter</h5>
                                 <select name="" id="power_adapter" class="col-md-6">
                                     <option value="UK / IRELAND 230V">UK / IRELAND 230V</option>
-									<option value="EUROPE 230V">EUROPE 230V</option>
-									<option value="USA / CANADA 120V">USA / CANADA 120V</option>
-									<option value="AUSTRALIA / NZ 230V">AUSTRALIA / NZ 230V</option>
-									<option value="JAPAN 100V">JAPAN 100V</option>
+                                    <option value="EUROPE 230V">EUROPE 230V</option>
+                                    <option value="USA / CANADA 120V">USA / CANADA 120V</option>
+                                    <option value="AUSTRALIA / NZ 230V">AUSTRALIA / NZ 230V</option>
+                                    <option value="JAPAN 100V">JAPAN 100V</option>
                                 </select>
                             </div>
                             <div class="row w-100 mt-3">
                                 <h5 class="col-md-6">Backboard shape</h5>
                                 <select name="" id="backboard_shape" class="col-md-6">
-                                    <option value="Cut Around Acrylic: Hang/Wall-mount">Cut Around Acrylic: Hang/Wall-mount</option>
-									<option value="Rectangle Acrylic: Hang/Wall-mount">Rectangle Acrylic: Hang/Wall-mount</option>
-									<option value="Cut To Letter: Hang/Wall-mount">Cut To Letter: Hang/Wall-mount</option>
+                                    <option value="1">Cut Around Acrylic:
+                                        Hang/Wall-mount</option>
+                                    <option value="2">Rectangle Acrylic:
+                                        Hang/Wall-mount</option>
+                                    <option value="3">Cut To Letter: Hang/Wall-mount +21$
+                                    </option>
                                 </select>
                             </div>
                             <div class="d-flex checkboxes w-100 mt-5">
-								<div class="check customcb">
-                                     <input type="checkbox" checked value="1" id="bumper_sale" name="bumper_sale" />
-                                     <label class="inner" for="bumper_sale"></label>
-                                </div><h5 class="mla-4"><label for="bumper_sale"><b>Free</b> Bumper Sale: Remote and Dimmer</label>
+                                <div class="check customcb">
+                                    <input type="checkbox" checked value="1" id="bumper_sale" name="bumper_sale" />
+                                    <label class="inner" for="bumper_sale"></label>
+                                </div>
+                                <h5 class="mla-4"><label for="bumper_sale"><b>Free</b> Bumper Sale: Remote and
+                                        Dimmer</label>
                                 </h5>
                             </div>
                             <div class="d-flex checkboxes w-100 mt-3">
-								<div class="check customcb">
-                                     <input type="checkbox" value="1" id="hanging" name="hanging" />
-                                     <label class="inner" for="hanging"></label>
+                                <div class="check customcb">
+                                    <input type="checkbox" value="1" id="hanging" name="hanging" />
+                                    <label class="inner" for="hanging"></label>
                                 </div>
-                                <h5 class="mla-4"><label for="hanging">Sign Hanging chain Kit $15</label></h5>
+                                <h5 class="mla-4 "><label for="hanging">Sign Hanging chain Kit $15</label></h5>
                             </div>
                             <div class="d-flex checkboxes w-100 mt-3">
-								<div class="check customcb">
-                                     <input type="checkbox" value="1" id="wall_mounting" name="wall_mounting" />
-                                     <label class="inner" for="wall_mounting"></label>
+                                <div class="check customcb">
+                                    <input type="checkbox" value="1" id="wall_mounting" name="wall_mounting" />
+                                    <label class="inner" for="wall_mounting"></label>
                                 </div>
                                 <h5 class="mla-4"><label for="wall_mounting">Sign Wall Mounting Kit $15</label></h5>
                             </div>
-                            <div
-                                class="d-flex justify-content-start m-auto align-items-center flex-wrap text-center sizes w-100 pt-2 pb-2 cont total-amount">
+                            <div class="repel d-flex justify-content-start m-auto align-items-center flex-wrap text-center sizes w-100 pt-2 pb-2 cont total-amount">
                                 <div class="col-md-6 a2">Total Amount :</div>
                                 <div class="col-md-6 h price amount" id="OverallAmount">$99</div>
                             </div>
-                            <div
-                                class="cart-btn d-flex justify-content-center align-items-center flex-wrap text-center sizes pt-2 pb-2 btn a2">
+                            <div class="cart-btn d-flex justify-content-center align-items-center flex-wrap text-center sizes pt-2 pb-2 btn a2">
                                 <button class="col-md-12 cart" id="add_cart" style="background-color: transparent;
     border: none;">Add to Cart</button>
                             </div>
@@ -374,112 +354,183 @@
                 </div>
                 <div class="paragraph-container ">
                     <p class="w-100" style="padding: 35px 0 0 110px;">
-                        Apart from offering the some top-end neon sign lights, we are also America’s most affordable
-                        neon signs marketplace. We offer you unlimited options for your neon signs. You can customize
-                        your neon signs with 100s of fonts, colors and sizes.You can also
-                        just upload your own design or your companies logo and we can make your it glow neon-ic.Also you
-                        could hire our neon designer and he could design as per your requirements and needs.</p>
+                        Apart from offering the some top-end neon sign lights, we are also America’s most affordable neon signs marketplace. We offer you unlimited options for your neon signs. You can customize your neon signs with 100s of fonts, colors and sizes.You can also
+                        just upload your own design or your companies logo and we can make your it glow neon-ic.Also you could hire our neon designer and he could design as per your requirements and needs.</p>
                 </div>
             </div>
         </section>
         <?php include 'tricks/subscribe-foot.php'; ?>
         <section class="tabs horizontal-line m-auto" style="width: 90% !important;"></section>
         <?php include 'tricks/footer-home.php'; ?>
-		<div class="sms"><div id="sms"></div></div>
+        <div class="sms">
+            <div id="sms"></div>
+        </div>
     </main>
     <script src="assets/js/app.main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-		$(document).on('scroll',function(){
-		console.log($(this).scrollTop());
-			let y = $(this).scrollTop();
-			if(y >= 380 && y < 555){
-			$(".mover").addClass("sticky");
-			}else {
-			$(".mover").removeClass("sticky");
-			}
-       });
-    $(document).ready(function() {
-        waitForWebfonts(['alexa', 'amanda', 'amsterdam', 'austin', 'avante', 'barcelona', 'bayview',
-            'beachfront', 'bellview', 'buttercup', 'chelsea', 'classictype', 'freehand', 'freespirit',
-            'greenworld', 'loveneon', 'lovenote', 'marquee', 'mayfair', 'melbourne', 'monaco',
-            'neonglow', 'neonlite', 'neonscript', 'neontrace', 'neotokyo', 'nevada', 'newcursive',
-            'northshore', 'photogenic', 'rocket', 'royalty', 'scifi', 'signature', 'sorrento',
-            'typewriter', 'venetian', 'vintage', 'waikiki', 'wildscript'
-        ], function() {
-            setTimeout(() => {
-                $("#preloader").fadeOut();
-            }, 100);
+        const buttons = document.getElementsByClassName("repel");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+        $(document).on('scroll', function() {
+            console.log($(this).scrollTop());
+            let y = $(this).scrollTop();
+            if (y >= 380 && y < 1100) {
+                $(".mover").addClass("sticky");
+            } else {
+                $(".mover").removeClass("sticky");
+            }
         });
-        tabs("text");
-        tabs("font");
-        tabs("color");
-        dragElement(document.getElementById("typed_text"));
-        let PreviewText = $(".text-preview");
-        let PreviewWidthText = $(".horizontal-scale span");
-        let PreviewHeightText = $(".vertical-scale span");
-        const pixelEachCm = 0.02645833333;
-        text_enter_preview();
-        $("textarea").on('keyup', function() {
+        $(document).ready(function() {
+            waitForWebfonts(['alexa', 'amanda', 'amsterdam', 'austin', 'avante', 'barcelona', 'bayview',
+                'beachfront', 'bellview', 'buttercup', 'chelsea', 'classictype', 'freehand', 'freespirit',
+                'greenworld', 'loveneon', 'lovenote', 'marquee', 'mayfair', 'melbourne', 'monaco',
+                'neonglow', 'neonlite', 'neonscript', 'neontrace', 'neotokyo', 'nevada', 'newcursive',
+                'northshore', 'photogenic', 'rocket', 'royalty', 'scifi', 'signature', 'sorrento',
+                'typewriter', 'venetian', 'vintage', 'waikiki', 'wildscript'
+            ], function() {
+                setTimeout(() => {
+                    $("#preloader").fadeOut();
+                }, 100);
+            });
+            tabs("text");
+            tabs("font");
+            tabs("color");
+            let Universal_data = new Array();
+            dragElement(document.getElementById("typed_text"));
+            let PreviewText = $(".text-preview");
+            let PreviewWidthText = $(".horizontal-scale span");
+            let PreviewHeightText = $(".vertical-scale span");
+            const pixelEachCm = 0.02645833333;
             text_enter_preview();
-            let position = $("#typed_text").position();
-            let width = $("#typed_text").width() * pixelEachCm;
-            let height = $("#typed_text").height() * pixelEachCm;
-            width = width.toFixed(2);
-            height = height.toFixed(2);
-            priceDeclare();
-			let text_length = parseInt($(this).val().length);
-			if (text_length > 46) {
-				$(".sms").fadeIn();
-				$(".sms").css("display","flex");
-				$("#sms").html("For more than 45 words whatsapp to get a quote - 1800945642.");
-				$(".sms").click(function () {
-                $(".sms").fadeOut();
-				});
-			}
-        });
-        $(".font.cont").click(function() {
-            $(".font").removeClass("active");
-            let font = this.style.fontFamily;
-            let line_height = $(this).attr("lineh");
-            let font_size = $(this).attr("size");
-            $(".text-preview").css({
-                "font-family": font,
-                "line-height": line_height,
-                "font-size": font_size
-            });
-            priceDeclare();
-        });
-        $(".color.cont").click(function() {
-            $(".color").removeClass("active");
-            let color = $(this).attr("color");
-            let neon = $(this).attr("neon");
-            $(".text-preview").css({
-                "color": color,
-                "text-shadow": neon
-            });
-            let position = $(this).position();
-            alter($(this).attr("name"), position);
-        });
-        $(".size.cont").click(function() {
-            $(".size").removeClass("active");
-            setTimeout(() => {
+            $("textarea").on('keyup', function() {
+                text_enter_preview();
+                let position = $("#typed_text").position();
+                let width = $("#typed_text").width() * pixelEachCm;
+                let height = $("#typed_text").height() * pixelEachCm;
+                width = width.toFixed(2);
+                height = height.toFixed(2);
                 priceDeclare();
-            }, 1000);
-        });
-		$(".bgs").click(function() {
-			$(".bgs").removeClass("active");
-			$(this).addClass("active");
-			let bgg = $(this).attr("src");
-            $(".mover").css({
-                "background-image": "url('"+bgg+"')",
+                textByContSize(this);
+                let text_length = parseInt($(this).val().length);
+                if (text_length > 46) {
+                    $(".sms").fadeIn();
+                    $(".sms").css("display", "flex");
+                    $("#sms").html("For more than 45 words whatsapp to get a quote - 1800945642.");
+                    $(".sms").click(function() {
+                        $(".sms").fadeOut();
+                    });
+                }
             });
-        });
-        $(".cont").click(function() {
-            this.classList.toggle("active");
-        });
+            $(".font.cont").click(function() {
+                $(".font").removeClass("active");
+                let font = this.style.fontFamily;
+                let line_height = $(this).attr("lineh");
+                let font_size = $(this).attr("size");
+                $(".text-preview").css({
+                    "font-family": font,
+                    // "line-height": line_height,
+                    // "font-size": font_size
+                });
+                priceDeclare();
+            });
+            $(".color.cont").click(function() {
+                $(".color").removeClass("active");
+                let color = $(this).attr("color");
+                let neon = $(this).attr("neon");
+                $(".text-preview").css({
+                    "color": color,
+                    "text-shadow": neon
+                });
+                let position = $(this).position();
+                alter($(this).attr("name"), position);
+            });
+            $(".size.cont").click(function() {
+                $(".size").removeClass("active");
+                setTimeout(() => {
+                    priceDeclare();
+                }, 1000);
+            });
+            $(".bgs").click(function() {
+                $(".bgs").removeClass("active");
+                $(this).addClass("active");
+                let bgg = $(this).attr("src");
+                $(".mover").css({
+                    "background-image": "url('" + bgg + "')",
+                });
+            });
+            $(".cont").click(function() {
+                this.classList.toggle("active");
+            });
+            $("#backboard_shape").on('change', function() {
+                let v = $(this).val();
+                if (v == "3") {
+                    Universal_data.push({
+                        "backboard_shape": 21
+                    });
+                }
 
-    });
+            });
+            document.getElementById("add_cart").addEventListener("click", function() {
+                $(this).attr("disabled", true);
+                $("#preloader").fadeIn();
+                html2canvas(document.getElementById("typed_text"), {
+                    backgroundColor: null
+                }).then(function(canvas) {
+                    var imgData = canvas.toDataURL('image/png');
+                    $("#img").attr("src", imgData);
+
+                    let cart_data = {
+                        "image": imgData,
+                        "name": $("textarea").val().replace(" ", '_'),
+                        "font": $(".font.active").css("font-family"),
+                        "color": $(".color.active").attr("name"),
+                        "size": {
+                            "name": $(".cont.size.active")[0].children[0].children[0].innerText,
+                            "amount": $("#OverallAmount").html().replace("$", '').replace(",",
+                                ''),
+                            "width": $(".cont.size.active")[0].children[1].children[0]
+                                .innerText,
+                            "height": $(".cont.size.active")[0].children[1].children[1]
+                                .innerText,
+                        },
+                        "power_adapter": $("#power_adapter").val(),
+                        "backboard_shape": $("#backboard_shape").val(),
+                        "bumper_sale": checkCheckbox("bumper_sale"),
+                        "hanging": checkCheckbox("hanging"),
+                        "wall_mounting": checkCheckbox("wall_mounting"),
+                    };
+                    add_cart(cart_data);
+                });
+            });
+            $("#hanging").on('click', function() {
+                for (var i = 0; i <= Universal_data.length - 1; i++) {
+                    if (Universal_data[i][0] == "hanging") {
+                        Universal_data[i].splice(0, 2);
+                    }
+                }
+                if (checkCheckbox("hanging") == "yes") {
+                    Universal_data.push({
+                        "hanging": 15
+                    });
+                }
+            });
+            $("#wall_mounting").on('click', function() {
+                for (var i = 0; i <= Universal_data.length - 1; i++) {
+                    if (Universal_data[i][0] == "wall_mounting") {
+                        Universal_data[i].splice(0, 2);
+                    }
+                }
+                if (checkCheckbox("wall_mounting") == "yes") {
+                    Universal_data.push({
+                        "wall_mounting": 15
+                    });
+                }
+                console.log(Universal_data);
+            });
+
+        });
     </script>
 </body>
 

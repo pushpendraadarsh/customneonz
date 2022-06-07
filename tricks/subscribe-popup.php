@@ -1,6 +1,11 @@
 <div class="offer" data-toggle="modal" data-target="#exampleModalCenter">
     <span>Get 10% discount now</span>
 </div>
+<style>
+    #exampleModalCenter{
+        padding:0 !important;
+    }
+</style>
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog justify-content-center modal-dialog-centered" style="
@@ -18,7 +23,7 @@
                 <img class="w-100 h-100" src="assets/images/icons/important/10%25%20subscribe.jpg" alt="">
                 <div class="w-100 h-100 form-container">
                     <div class="text-right" style="font-size: 20px;cursor: pointer;" data-dismiss="modal">
-                        <i class="fa-solid fa-circle-xmark mr-3 mt-3" style="
+                        <i class="fa-solid fa-circle-xmark mra-10 mta-10" style="
                                     background-color: #D9D9D9;
                                     color: white;
                                     font-size: 26px;
@@ -37,10 +42,15 @@
                                 margin-top: 106px;
                                 ">Subscribe and Get 10% off</p>
                     <div class="subscribe-form">
-                        <form class="w-100 h-100" action="">
-                            <input type="text" placeholder="Enter Email Id">
-                            <button type="submit"><i class="fa-solid fa-arrow-right-long"></i></button>
+                        <form class="w-100 h-100" onsubmit="subscribeNow(this,event)">
+                            <input type="email" name="email" placeholder="Enter Email Id">
+                            <button type="submit" id="subscribeUs" class="">
+                                <img class="loading loader-sm" src="assets/images/icons/loader.gif" alt="">
+                                <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
+                                <i>GET ME A DISCOUNT</i>
+                            </button>
                         </form>
+                        <div id="output_subscribe"></div>
                     </div>
                 </div>
             </div>
