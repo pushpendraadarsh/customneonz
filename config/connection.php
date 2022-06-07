@@ -1,8 +1,8 @@
 <?php
-$dbhost   = 'localhost';
-$dbuser   = 'root';
-$dbpass   = '';
-$dbname   = 'neon';
+$dbhost   = 'localhost:3306';
+$dbuser   = 'neonz_xis';
+$dbpass   = 'Ep#xtc?E2k64Wmuo';
+$dbname   = 'neonz_xis_app';
 $timezone = date_default_timezone_set("Asia/Kolkata");
 $conn     = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
